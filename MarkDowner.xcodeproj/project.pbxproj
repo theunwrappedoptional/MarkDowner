@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5423481E29E9533700CFC757 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423481829E9533700CFC757 /* StyleSheet.swift */; };
+		5423481F29E9533700CFC757 /* ulysses.css in Resources */ = {isa = PBXBuildFile; fileRef = 5423481929E9533700CFC757 /* ulysses.css */; };
+		5423482029E9533700CFC757 /* darksolarized.css in Resources */ = {isa = PBXBuildFile; fileRef = 5423481A29E9533700CFC757 /* darksolarized.css */; };
+		5423482129E9533700CFC757 /* github.css in Resources */ = {isa = PBXBuildFile; fileRef = 5423481B29E9533700CFC757 /* github.css */; };
+		5423482229E9533700CFC757 /* lopash.css in Resources */ = {isa = PBXBuildFile; fileRef = 5423481C29E9533700CFC757 /* lopash.css */; };
+		5423482329E9533700CFC757 /* raywenderlich.css in Resources */ = {isa = PBXBuildFile; fileRef = 5423481D29E9533700CFC757 /* raywenderlich.css */; };
+		5423482529E9542400CFC757 /* MenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423482429E9542400CFC757 /* MenuCommands.swift */; };
 		5478FC6B29E8099B00C36725 /* MarkDownerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478FC6A29E8099B00C36725 /* MarkDownerApp.swift */; };
 		5478FC6D29E8099B00C36725 /* MarkDownerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478FC6C29E8099B00C36725 /* MarkDownerDocument.swift */; };
 		5478FC6F29E8099B00C36725 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478FC6E29E8099B00C36725 /* ContentView.swift */; };
@@ -17,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5423481829E9533700CFC757 /* StyleSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		5423481929E9533700CFC757 /* ulysses.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ulysses.css; sourceTree = "<group>"; };
+		5423481A29E9533700CFC757 /* darksolarized.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = darksolarized.css; sourceTree = "<group>"; };
+		5423481B29E9533700CFC757 /* github.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = github.css; sourceTree = "<group>"; };
+		5423481C29E9533700CFC757 /* lopash.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = lopash.css; sourceTree = "<group>"; };
+		5423481D29E9533700CFC757 /* raywenderlich.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = raywenderlich.css; sourceTree = "<group>"; };
+		5423482429E9542400CFC757 /* MenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommands.swift; sourceTree = "<group>"; };
 		5478FC6729E8099B00C36725 /* MarkDowner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkDowner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5478FC6A29E8099B00C36725 /* MarkDownerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownerApp.swift; sourceTree = "<group>"; };
 		5478FC6C29E8099B00C36725 /* MarkDownerDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkDownerDocument.swift; sourceTree = "<group>"; };
@@ -40,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5423481729E9533700CFC757 /* StyleSheets */ = {
+			isa = PBXGroup;
+			children = (
+				5423481829E9533700CFC757 /* StyleSheet.swift */,
+				5423481929E9533700CFC757 /* ulysses.css */,
+				5423481A29E9533700CFC757 /* darksolarized.css */,
+				5423481B29E9533700CFC757 /* github.css */,
+				5423481C29E9533700CFC757 /* lopash.css */,
+				5423481D29E9533700CFC757 /* raywenderlich.css */,
+			);
+			path = StyleSheets;
+			sourceTree = "<group>";
+		};
 		5478FC5E29E8099B00C36725 = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +92,10 @@
 				5478FC7029E8099D00C36725 /* Assets.xcassets */,
 				5478FC7529E8099D00C36725 /* Info.plist */,
 				5478FC7629E8099D00C36725 /* MarkDowner.entitlements */,
+				5423481729E9533700CFC757 /* StyleSheets */,
 				5478FC7229E8099D00C36725 /* Preview Content */,
 				5478FC7F29E8124000C36725 /* WebView.swift */,
+				5423482429E9542400CFC757 /* MenuCommands.swift */,
 			);
 			path = MarkDowner;
 			sourceTree = "<group>";
@@ -143,8 +172,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5423482229E9533700CFC757 /* lopash.css in Resources */,
 				5478FC7429E8099D00C36725 /* Preview Assets.xcassets in Resources */,
+				5423482129E9533700CFC757 /* github.css in Resources */,
+				5423481F29E9533700CFC757 /* ulysses.css in Resources */,
+				5423482329E9533700CFC757 /* raywenderlich.css in Resources */,
 				5478FC7129E8099D00C36725 /* Assets.xcassets in Resources */,
+				5423482029E9533700CFC757 /* darksolarized.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5478FC6D29E8099B00C36725 /* MarkDownerDocument.swift in Sources */,
+				5423481E29E9533700CFC757 /* StyleSheet.swift in Sources */,
+				5423482529E9542400CFC757 /* MenuCommands.swift in Sources */,
 				5478FC8029E8124000C36725 /* WebView.swift in Sources */,
 				5478FC6B29E8099B00C36725 /* MarkDownerApp.swift in Sources */,
 				5478FC6F29E8099B00C36725 /* ContentView.swift in Sources */,
