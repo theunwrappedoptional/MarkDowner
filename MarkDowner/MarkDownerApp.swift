@@ -12,6 +12,7 @@ struct MarkDownerApp: App {
     var body: some Scene {
         DocumentGroup(newDocument: MarkDownerDocument()) { file in
             ContentView(document: file.$document)
+                .focusedValue(\.document, file.$document)
         }
         .commands{
             MenuCommands()

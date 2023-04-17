@@ -28,7 +28,6 @@ struct WebView: NSViewRepresentable {
             """
     }
     
-    
     init(html: String?, address: String? = nil) {
         self.html = html
         self.address = address
@@ -46,5 +45,4 @@ struct WebView: NSViewRepresentable {
             nsView.load(request)
         }
     }
-    
 }

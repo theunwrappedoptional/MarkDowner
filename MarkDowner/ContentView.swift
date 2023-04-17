@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Binding var document: MarkDownerDocument
+    
     @State private var previewState = PreviewState.web
     @AppStorage("editorFontSize") var editorFontSize: Double = 14
 

@@ -42,3 +42,14 @@ struct MarkDownerDocument: FileDocument {
         return .init(regularFileWithContents: data)
     }
 }
+
+extension MarkDownerDocument: FocusedValueKey {
+    public typealias Value = Binding<Self>
+}
+
+extension FocusedValues {
+    var document: MarkDownerDocument.Value? {
+        get { self[MarkDownerDocument.self] }
+        set { self[MarkDownerDocument.self] = newValue }
+    }
+}

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MenuCommands: Commands {
     
+    @FocusedBinding(\.document) var document
+    
     @AppStorage("styleSheet") var styleSheet: StyleSheet = .raywenderlich
     @AppStorage("editorFontSize") var editorFontSize: Double = 14
     
@@ -53,7 +55,29 @@ struct MenuCommands: Commands {
             } label: {
                 Text("Markdown Help")
             }
-
+        }
+        
+        CommandMenu("Markdown") {
+            Button("Bold") {
+                document?.text += "**BOLD**"
+            }
+            .keyboardShortcut("b")
+            
+            Button("Italic") {
+                document?.text += "_Italic_"
+            }
+            .keyboardShortcut("i", modifiers: .command)
+            
+            Button("Link") {
+                let linkText = "[Title](https://link_to_page)"
+                document?.text += linkText
+            }
+            
+            Button("Image") {
+                let imageText = "![alt text](https://link_to_image)"
+                document?.text += imageText
+            }
+            
         }
     }
 }
