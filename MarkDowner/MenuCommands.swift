@@ -14,6 +14,8 @@ struct MenuCommands: Commands {
     @AppStorage("styleSheet") var styleSheet: StyleSheet = .raywenderlich
     @AppStorage("editorFontSize") var editorFontSize: Double = 14
     
+    var titles: [String] = ["h1", "h2", "h3", "h4", "h5", "h6"]
+    
     var body: some Commands {
         CommandMenu("Display"){
             ForEach(StyleSheet.allCases, id: \.self) { style in
@@ -55,6 +57,7 @@ struct MenuCommands: Commands {
             } label: {
                 Text("Markdown Help")
             }
+            .keyboardShortcut("h", modifiers: .control)
         }
         
         CommandMenu("Markdown") {
@@ -72,12 +75,54 @@ struct MenuCommands: Commands {
                 let linkText = "[Title](https://link_to_page)"
                 document?.text += linkText
             }
+            .keyboardShortcut("l", modifiers: .command)
             
             Button("Image") {
                 let imageText = "![alt text](https://link_to_image)"
                 document?.text += imageText
             }
+            .keyboardShortcut("i", modifiers: [.control, .shift])
             
+            Divider()
+            
+            Menu("Headers"){
+                Button("H1") {
+                    let titleText = "# Title \n"
+                    document?.text += titleText
+                }
+                
+                Button("H2") {
+                    let titleText = "## Title \n"
+                    document?.text += titleText
+                }
+                
+                Button("H3") {
+                    let titleText = "### Title \n"
+                    document?.text += titleText
+                }
+                
+                Button("H4") {
+                    let titleText = "#### Title \n"
+                    document?.text += titleText
+                }
+                
+                Button("H5") {
+                    let titleText = "###### Title \n"
+                    document?.text += titleText
+                }
+                
+                Button("H6") {
+                    let titleText = "###### Title \n"
+                    document?.text += titleText
+                }
+            }
+            
+            Divider()
+            
+            Button("Divider Line") {
+                let dividerText = "\n---\n"
+                document?.text += dividerText
+            }
         }
         
         CommandGroup(after: .importExport) {
@@ -85,6 +130,7 @@ struct MenuCommands: Commands {
                 exportHTML()
             }
             .disabled(document == nil)
+            .keyboardShortcut("e", modifiers: .command)
         }
     }
     
