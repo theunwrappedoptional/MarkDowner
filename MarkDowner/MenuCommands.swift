@@ -72,7 +72,7 @@ struct MenuCommands: Commands {
             .keyboardShortcut("i", modifiers: .command)
             
             Button("Link") {
-                let linkText = "[Title](https://link_to_page)"
+                let linkText = "[Link Text](https://link_to_page)"
                 document?.text += linkText
             }
             .keyboardShortcut("l", modifiers: .command)
