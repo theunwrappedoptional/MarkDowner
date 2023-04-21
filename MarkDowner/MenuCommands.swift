@@ -78,7 +78,7 @@ struct MenuCommands: Commands {
             .keyboardShortcut("l", modifiers: .command)
             
             Button("Image") {
-                let imageText = "![alt text](https://link_to_image)"
+                let imageText = "![alt text](https://link_to_image)  "
                 document?.text += imageText
             }
             .keyboardShortcut("i", modifiers: [.control, .shift])
@@ -90,31 +90,37 @@ struct MenuCommands: Commands {
                     let titleText = "# Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("1")
                 
                 Button("H2") {
                     let titleText = "## Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("2")
                 
                 Button("H3") {
                     let titleText = "### Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("3")
                 
                 Button("H4") {
                     let titleText = "#### Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("4")
                 
                 Button("H5") {
                     let titleText = "###### Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("5")
                 
                 Button("H6") {
                     let titleText = "###### Title \n"
                     document?.text += titleText
                 }
+                .keyboardShortcut("6")
             }
             
             Divider()
@@ -123,6 +129,7 @@ struct MenuCommands: Commands {
                 let dividerText = "\n---\n"
                 document?.text += dividerText
             }
+            .keyboardShortcut("/")
         }
         
         CommandGroup(after: .importExport) {
